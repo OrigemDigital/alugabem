@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlugaBem — Encontre o lar ideal</title>
+  <meta name="description" content="AlugaBem: encontre o lar ideal, com segurança e praticidade.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Logo (SVG reaproveitado) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo-casa" viewBox="0 0 100 100">
+      <path d="M10 53 L50 24 L90 53" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="68" y="17" width="10" height="20" rx="3" fill="currentColor"/>
+      <path d="M23 62 Q23 59 26 57 L50 40 L74 57 Q77 59 77 62 V80 Q77 91 66 91 H56 V69 H44 V91 H34 Q23 91 23 80 Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <header class="topo">
+    <div class="container topo-inner">
+      <a href="#inicio" class="marca" aria-label="AlugaBem - início">
+        <img class="marca-icone" src="img/logo-azul.png" alt="">
+        <span>Aluga<em>Bem</em></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg></button>
+      <nav class="menu" id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato" class="btn btn-pequeno">Contato</a>
+        <a href="index.html" class="sair">Sair</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-texto">
+          <span class="selo">Bem-vindo!</span>
+          <h1>Encontre o lar ideal, com <span class="destaque">segurança</span> e <span class="destaque">praticidade!</span></h1>
+          <p>No AlugaBem você encontra casas para alugar, com fotos, valores e tudo o que precisa saber antes de fechar negócio.</p>
+          <div class="hero-botoes">
+            <a href="#imoveis" class="btn">Ver imóveis</a>
+            <a href="#como-funciona" class="btn btn-contorno">Como funciona</a>
+          </div>
+        </div>
+        <div class="hero-persona">
+          <div class="blob"></div>
+          <img src="img/persona-meio.png" alt="Persona do AlugaBem, sorrindo e segurando uma prancheta">
+        </div>
+      </div>
+    </section>
+
+    <!-- IMÓVEIS -->
+    <section class="secao" id="imoveis">
+      <div class="container">
+        <div class="secao-topo">
+          <h2>Imóveis em destaque</h2>
+          <p>Escolha um imóvel para ver fotos, descrição, local e valor.</p>
+        </div>
+
+        <div class="busca">
+          <span class="busca-icone"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          <input type="search" id="busca" placeholder="Buscar por bairro..." aria-label="Buscar por bairro">
+        </div>
+
+        <div class="filtros" id="filtros">
+          <button class="chip ativo" data-filtro="todos">Todos</button>
+          <button class="chip" data-filtro="favoritos">Favoritos</button>
+        </div>
+
+        <div class="grade" id="grade" aria-live="polite"></div>
+        <p class="vazio" id="vazio" hidden>Nenhum imóvel encontrado. Tente outro bairro ou filtro.</p>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="secao secao-azul-claro" id="como-funciona">
+      <div class="container">
+        <div class="secao-topo">
+          <h2>Como funciona</h2>
+          <p>Alugar ficou simples em três passos.</p>
+        </div>
+        <div class="passos">
+          <article class="passo">
+            <div class="passo-num">1</div>
+            <h3>Busque</h3>
+            <p>Procure por bairro e salve suas casas favoritas.</p>
+          </article>
+          <article class="passo">
+            <div class="passo-num">2</div>
+            <h3>Compare</h3>
+            <p>Veja fotos, valor, número de quartos, banheiros e tamanho.</p>
+          </article>
+          <article class="passo">
+            <div class="passo-num">3</div>
+            <h3>Entre em contato</h3>
+            <p>Fale direto com a nossa equipe e agende a sua visita.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="secao" id="contato">
+      <div class="container">
+        <div class="cta">
+          <div class="cta-texto">
+            <img class="cta-icone" src="img/logo-branca.png" alt="">
+            <h2>Mais que um site, uma nova fase para você!</h2>
+            <p>Deixe seus dados e retornamos o mais rápido possível.</p>
+          </div>
+          <form class="form" id="formContato" novalidate>
+            <label>Nome
+              <input type="text" id="nome" placeholder="Seu nome" required>
+            </label>
+            <label>E-mail ou telefone
+              <input type="text" id="contatoInfo" placeholder="Como podemos falar com você?" required>
+            </label>
+            <label>Mensagem
+              <textarea id="mensagem" rows="3" placeholder="Qual imóvel te interessou?"></textarea>
+            </label>
+            <button type="submit" class="btn btn-branco">Enviar mensagem</button>
+            <p class="form-aviso" id="formAviso" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-inner">
+      <a href="#inicio" class="marca marca-clara">
+        <img class="marca-icone" src="img/logo-branca.png" alt="">
+        <span>Aluga<em>Bem</em></span>
+      </a>
+      <p>Encontre o lar ideal, com segurança e praticidade!</p>
+      <small>Projeto escolar — imóveis, valores e dados fictícios.</small>
+    </div>
+  </footer>
+
+  <!-- MODAL DE DETALHES -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-fundo" data-fechar></div>
+    <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="mTitulo">
+      <button class="modal-fechar" data-fechar aria-label="Fechar"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      <div class="galeria">
+        <div class="galeria-principal" id="mFoto"></div>
+        <div class="galeria-mini" id="mMinis"></div>
+      </div>
+      <div class="modal-info">
+        <h3 id="mTitulo"></h3>
+        <p class="preco" id="mPreco"></p>
+        <ul class="specs" id="mSpecs"></ul>
+        <p class="local" id="mLocal"></p>
+        <h4>Sobre o imóvel</h4>
+        <p id="mDesc"></p>
+        <button class="btn btn-cheio" id="mContato">Entrar em contato</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
