@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlugaBem — Entrar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="tela">
+    <!-- Persona grande -->
+    <section class="palco" aria-label="Boas-vindas">
+      <img class="persona" src="img/persona-meio.png" alt="Persona do AlugaBem sorrindo e segurando uma prancheta">
+    </section>
+
+    <!-- Fala da persona (ao lado) + cartão de entrada -->
+    <div class="lado">
+      <div class="fala">
+        <strong>Olá! Seja bem-vindo(a) ao AlugaBem!</strong>
+        <span>Preencha seus dados para entrar e encontrar o imóvel perfeito para você.</span>
+      </div>
+
+      <section class="cartao">
+        <div class="marca">
+          <img src="img/logo-azul.png" alt="">
+          <span>Aluga<em>Bem</em></span>
+        </div>
+        <h1>Bem-vindo!</h1>
+        <p class="sub">Encontre o lar ideal, com segurança e praticidade!</p>
+
+        <form id="form" novalidate>
+          <label>E-mail
+            <input type="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="off">
+          </label>
+          <label>Senha
+            <div class="senha">
+              <input type="password" id="senha" placeholder="Digite sua senha" autocomplete="off">
+              <button type="button" id="ver" aria-label="Mostrar senha">Ver</button>
+            </div>
+          </label>
+          <p class="aviso" id="aviso" role="alert"></p>
+          <button type="submit" class="btn">Entrar</button>
+        </form>
+
+        <small class="demo">Tela de demonstração — qualquer e-mail e senha funcionam.</small>
+      </section>
+    </div>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
